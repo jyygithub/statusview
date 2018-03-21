@@ -41,7 +41,7 @@ dependencies {
 ```
 
 ```
-切换状态：（默认状态为isLoading）
+change state：（default state is isLoading）
 
  mStatusView.isLoading();
  mStatusView.isEmpty();
