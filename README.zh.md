@@ -1,9 +1,9 @@
 # statusview
 [![Download](https://api.bintray.com/packages/jiangyychn/maven/dialog/images/download.svg)](https://bintray.com/jiangyychn/maven/dialog) ![API](https://img.shields.io/badge/api-14%2B-brightgreen.svg)
 
-[English document](https://github.com/jyygithub/dialog/blob/master/README.zh.md)
+[English document](https://github.com/jyygithub/dialog/blob/master/README.md)
 
-# Download
+# 下载
 ```
 dependencies {
     // ... other dependencies here
@@ -11,7 +11,7 @@ dependencies {
 }
 ```
 
-# Usage
+# 使用
 
 ```
 <FrameLayout
@@ -48,7 +48,7 @@ dependencies {
  mStatusView.isFinished();
 ```
 
-# Optional Attributes
+# 自定义参数
 
 ```
 app:textSize
