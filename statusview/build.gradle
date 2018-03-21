@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+task javadoc(type: Javadoc) {
+    options.encoding = "UTF-8"
+    options.charSet 'UTF-8'
+}
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'com.android.support:appcompat-v7:26.1.0'
+}
+
+publish {
+    userOrg = 'jiangyychn'
+    groupId = 'com.jiangyy'
+    artifactId = 'statusview'
+    publishVersion = '1.0.0'
+    desc = 'A View that displays the state including loading,empty,error etc.'
+    website = 'https://github.com/jyygithub/statusview'
+}

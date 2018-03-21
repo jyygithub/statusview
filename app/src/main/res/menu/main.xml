@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/isLoading"
+        android:title="加载中"/>
+    <item
+        android:id="@+id/empty"
+        android:title="空"/>
+    <item
+        android:id="@+id/error"
+        android:title="加载失败"/>
+    <item
+        android:id="@+id/noNetwork"
+        android:title="网络错误"/>
+    <item
+        android:id="@+id/isFinished"
+        android:title="加载完成"/>
+
+</menu>

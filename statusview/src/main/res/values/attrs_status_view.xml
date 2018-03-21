@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="StatusView">
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="emptyIcon" format="reference"/>
+        <attr name="errorIcon" format="reference"/>
+        <attr name="noNetWorkIcon" format="reference"/>
+    </declare-styleable>
+</resources>
