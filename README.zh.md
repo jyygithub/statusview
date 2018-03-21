@@ -1,5 +1,5 @@
 # statusview
-[![Download](https://api.bintray.com/packages/jiangyychn/maven/dialog/images/download.svg)](https://bintray.com/jiangyychn/maven/dialog) ![API](https://img.shields.io/badge/api-14%2B-brightgreen.svg)
+[![Download](https://api.bintray.com/packages/jiangyychn/maven/statusview/images/download.svg)](https://bintray.com/jiangyychn/maven/statusview) ![API](https://img.shields.io/badge/api-14%2B-brightgreen.svg)
 
 [English document](https://github.com/jyygithub/dialog/blob/master/README.md)
 
