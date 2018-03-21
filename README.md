@@ -3,6 +3,8 @@
 
 [中文文档](https://github.com/jyygithub/statusview/blob/master/README.zh.md)
 
+<img src="https://github.com/jyygithub/statusview/blob/master/image/screen.gif" width = "280" height = "497" alt="效果图" align=center />
+
 # Download
 ```
 dependencies {
