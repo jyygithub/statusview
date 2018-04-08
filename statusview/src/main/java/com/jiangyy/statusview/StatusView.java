@@ -54,6 +54,7 @@ public class StatusView extends View {
 
     private float mStartAngle = 0f;
 
+    public static final int DEFAULT = -1;
     public static final int LOADING = 0;
     public static final int FINISHED = 1;
     public static final int EMPTY = 2;
@@ -61,9 +62,9 @@ public class StatusView extends View {
     public static final int NO_NETWORK = 4;
 
     @Status
-    private int mStatusNo = -1;
+    private int mStatusNo = DEFAULT;
 
-    @IntDef({LOADING, FINISHED, EMPTY, ERROR, NO_NETWORK})
+    @IntDef({DEFAULT, LOADING, FINISHED, EMPTY, ERROR, NO_NETWORK})
     @Retention(RetentionPolicy.RUNTIME)
     @interface Status {
     }
