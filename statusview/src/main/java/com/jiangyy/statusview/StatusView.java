@@ -65,7 +65,7 @@ public class StatusView extends View {
     private int mStatusNo = DEFAULT;
 
     @IntDef({DEFAULT, LOADING, FINISHED, EMPTY, ERROR, NO_NETWORK})
-    @Retention(RetentionPolicy.RUNTIME)
+    @Retention(RetentionPolicy.SOURCE)
     @interface Status {
     }
 
