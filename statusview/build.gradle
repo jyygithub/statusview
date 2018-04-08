@@ -7,11 +7,11 @@ task javadoc(type: Javadoc) {
 }
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 27
     }
 
     buildTypes {
@@ -25,14 +25,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    compileOnly 'com.android.support:appcompat-v7:26.1.0'
+    compileOnly 'com.android.support:appcompat-v7:27.1.0'
 }
 
 publish {
     userOrg = 'jiangyychn'
     groupId = 'com.jiangyy'
     artifactId = 'statusview'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'A View that displays the state including loading,empty,error etc.'
     website = 'https://github.com/jyygithub/statusview'
 }

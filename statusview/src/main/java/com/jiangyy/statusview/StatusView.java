@@ -30,6 +30,12 @@ import java.lang.annotation.RetentionPolicy;
  */
 public class StatusView extends View {
 
+    public interface OnRetryListener {
+        void onRetryClick();
+    }
+
+    private OnRetryListener mOnRetryListener;
+
     private Paint mPaint;
     private TextPaint mTextPaint;
 
@@ -106,6 +112,19 @@ public class StatusView extends View {
 
         invalidatePaint();
         isLoading();
+
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mStatusNo == LOADING || mStatusNo == FINISHED) {
+                    return;
+                }
+                isLoading();
+                if (mOnRetryListener != null) {
+                    mOnRetryListener.onRetryClick();
+                }
+            }
+        });
     }
 
     @Override
@@ -248,6 +267,10 @@ public class StatusView extends View {
         stopAnimator();
         invalidatePaint();
         invalidate();
+    }
+
+    public void setOnRetryListener(OnRetryListener onRetryListener) {
+        mOnRetryListener = onRetryListener;
     }
 
     private void startAnimator() {

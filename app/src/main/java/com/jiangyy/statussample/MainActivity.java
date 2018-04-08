@@ -1,5 +1,6 @@
 package com.jiangyy.statussample;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +10,7 @@ import android.widget.Toast;
 
 import com.jiangyy.statusview.StatusView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements StatusView.OnRetryListener {
 
     private StatusView mStatusView;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mStatusView = findViewById(R.id.statusView);
+        mStatusView.setOnRetryListener(this);
     }
 
     public void testClick(View view) {
@@ -51,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onRetryClick() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mStatusView.isEmpty();
+            }
+        }, 2000);
     }
 }
