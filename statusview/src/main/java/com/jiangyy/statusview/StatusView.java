@@ -289,6 +289,10 @@ public class StatusView extends View {
         mOnRetryListener = onRetryListener;
     }
 
+    public void setOnEmptyListener(OnEmptyListener onEmptyListener) {
+        mOnEmptyListener = onEmptyListener;
+    }
+
     private void startAnimator() {
         stopAnimator();
         startViewAnim(0f, 1f, 1000);
