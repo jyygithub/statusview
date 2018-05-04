@@ -34,7 +34,12 @@ public class StatusView extends View {
         void onRetryClick();
     }
 
+    public interface OnEmptyListener {
+        void onEmptyClick();
+    }
+
     private OnRetryListener mOnRetryListener;
+    private OnEmptyListener mOnEmptyListener;
 
     private Paint mPaint;
     private TextPaint mTextPaint;
@@ -118,6 +123,16 @@ public class StatusView extends View {
             @Override
             public void onClick(View v) {
                 if (mStatusNo == LOADING || mStatusNo == FINISHED) {
+                    return;
+                }
+                if (mStatusNo == EMPTY) {
+                    if (mOnEmptyListener != null) {
+                        mOnEmptyListener.onEmptyClick();
+                    } else {
+                        if (mOnRetryListener != null) {
+                            mOnRetryListener.onRetryClick();
+                        }
+                    }
                     return;
                 }
                 isLoading();
